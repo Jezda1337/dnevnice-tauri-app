@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.1",
+    "@tailwindcss/typography": "^0.5.4",
     "@tauri-apps/cli": "^1.0.5",
     "@tsconfig/svelte": "^3.0.0",
     "autoprefixer": "^10.4.8",
@@ -25,7 +26,10 @@
     "vite": "^3.0.0"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^1.35.6",
     "@tauri-apps/api": "^1.0.2",
+    "dotenv": "^16.0.1",
+    "html2pdf.js": "^0.10.1",
     "moment": "^2.29.4"
   }
 }
