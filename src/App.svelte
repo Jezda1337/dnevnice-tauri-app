@@ -19,11 +19,13 @@
         .from(document.getElementById("pdf"))
         .outputPdf("arraybuffer");
 
+      console.log(pdf);
+
       const path = await save({
         filters: [{ name: "pdf", extensions: ["pdf"] }],
       });
 
-      await writeBinaryFile(path, pdf);
+      await writeBinaryFile(path, new Uint8Array(pdf));
     }, 500);
   };
 
