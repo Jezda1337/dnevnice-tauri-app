@@ -3,7 +3,9 @@ import { writable } from "svelte/store";
 import type { Data } from "./modal";
 import { supabase } from "./supabaseClient";
 export const daysInMonth = writable(moment().daysInMonth());
-export const currentMonth = writable<string>(moment().format("MMMM"));
+export const currentMonth = writable<string>(
+  moment().subtract(1, "months").endOf("month").format("MMMM")
+);
 export const data = writable<Data[]>([]);
 
 export const initDB = async (values: any, month: string) => {
@@ -16,7 +18,6 @@ export const initDB = async (values: any, month: string) => {
 };
 
 export const createRow = async (id: number, values: any, month: string) => {
-  console.log(values);
   try {
     const { data } = await supabase.from(month).insert([values]);
     return data;
@@ -52,5 +53,6 @@ export const headers = writable<string[]>([
   "Pecenicic",
   "Dzambasovic",
   "Jezdic",
+  "Komnelic",
   "Napomene",
 ]);
