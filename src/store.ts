@@ -53,6 +53,6 @@ export const headers = writable<string[]>([
   "Pecenicic",
   "Dzambasovic",
   "Jezdic",
-  "Komnelic",
+  "Komlenic",
   "Napomene",
 ]);

@@ -4,6 +4,6 @@ export interface Data {
   pecenicic: boolean;
   dzambasovic: boolean;
   jezdic: boolean;
-  komnelic: boolean;
+  komlenic: boolean;
   napomena: string;
 }
